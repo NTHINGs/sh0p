@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 mb-3 px-2">
+                <div class="btn-group d-flex">
+                    <button type="button" class="btn btn-primary btn-group-icon btn-group-divider">
+                        <i [innerHTML]="'search' | eva: { fill: '#FFFFFF', animationType: 'pulse' }"
+                            class="align-middle"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-block">Buscar Producto</button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3 px-2">
+                <div class="btn-group d-flex">
+                    <button type="button" class="btn btn-primary btn-group-icon btn-group-divider">
+                        <i [innerHTML]="'plus-circle-outline' | eva: { fill: '#FFFFFF', animationType: 'pulse' }"
+                            class="align-middle"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-block">Entradas De Dinero</button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3 px-2">
+                <div class="btn-group d-flex">
+                    <button type="button" class="btn btn-primary btn-group-icon btn-group-divider">
+                        <i [innerHTML]="'minus-circle-outline' | eva: { fill: '#FFFFFF', animationType: 'pulse' }"
+                            class="align-middle"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-block">Salidas De Dinero</button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3 px-2">
+                <div class="btn-group d-flex">
+                    <button type="button" class="btn btn-primary btn-group-icon btn-group-divider">
+                        <i [innerHTML]="'pricetags-outline' | eva: { fill: '#FFFFFF', animationType: 'pulse' }"
+                            class="align-middle"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-block">Verificador De Precios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-body>
+                <input type="text" nbInput fullWidth shape="semi-round" placeholder="Ingresa o busca un producto">
+            </nb-card-body>
+        </nb-card>
+
+    </div>
+    <div class="col-12">
+        <nb-card>
+            <nb-card-body>
+                <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                </ng2-smart-table>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
